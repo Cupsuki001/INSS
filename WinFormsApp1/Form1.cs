@@ -36,19 +36,77 @@ namespace WinFormsApp1
 
         private void BTNcalcular_Click(object sender, EventArgs e)
         {
-            double codg, ing, ley, tot , por; 
+            double   ley, tot , por;
+           
 
-            if(MASKEDinssnumero.Text == "" && MASKEDingresomensual.Text == "") 
+            if (MASKEDinssnumero.Text == "" && MASKEDingresomensual.Text == "") 
             {
                 MessageBox.Show("Se necesita ingresar los datos necesario");
                 MASKEDinssnumero.Focus();
             }
-            if(MASKEDinssnumero.Text != "1234567") 
+            else if(MASKEDinssnumero.Text != "1234567") 
             {
-                MessageBox.Show("eL NUMERO QUE INGRESO ES INCORRECTO");
+                MessageBox.Show("EL NUMERO DEL INSS QUE INGRESO ES INCORRECTO");
+                MASKEDinssnumero.Text = "";
                 MASKEDinssnumero.Focus();
+                MASKEDingresomensual.Text = "";
+               
+            }
+            else 
+            {
+                double ing = Convert.ToDouble(MASKEDingresomensual.Text);
+
+                if (ing >= 6000 && ing <= 500000)
+                {
+
+                    if (treeView1.SelectedNode.Text.Equals("INNS LABORAL"))
+                    {
+                        ley = ing * 0.07;
+                        tot = ing - ley;
+
+                        TXBtotal.Text = tot.ToString();
+                        TXBarbol.Text = ley.ToString();
+                    }
+                    else if (treeView1.SelectedNode.Text.Equals("INNS PATRONAL"))
+                    {
+                        ley = ing * 0.22;
+                        tot = ing;
+
+                        TXBtotal.Text = tot.ToString();
+                        TXBarbol.Text = ley.ToString();
+                    }
+                    else if (treeView1.SelectedNode.Text.Equals("IR"))
+                    {
+                        ley = ing * 0.11;
+                        tot = ing - ley;
+
+                        TXBtotal.Text = tot.ToString();
+                        TXBarbol.Text = ley.ToString();
+                    }
+                    else 
+                    {
+                        MessageBox.Show("INGRESE UNA DEDUCCION PARA CALCULAR");
+                        MASKEDinssnumero.Focus();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Los ingresos tiene que estar en 6,000 o 500,000");
+                    MASKEDingresomensual.Text = "";
+                    MASKEDingresomensual.Focus();
+                }
             }
            
+        }
+
+        private void BTNlimpiar_Click(object sender, EventArgs e)
+        {
+            MASKEDingresomensual.Text = "";
+            MASKEDinssnumero.Text = "";
+            TXBarbol.Text = "";
+            TXBtotal.Text = "";
+
         }
     }
 }

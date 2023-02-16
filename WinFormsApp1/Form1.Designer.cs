@@ -54,6 +54,7 @@
             // 
             // treeView1
             // 
+            this.treeView1.LineColor = System.Drawing.Color.Navy;
             this.treeView1.Location = new System.Drawing.Point(35, 21);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Nodo0";
@@ -72,8 +73,8 @@
             // 
             // MASKEDinssnumero
             // 
-            this.MASKEDinssnumero.Location = new System.Drawing.Point(191, 153);
-            this.MASKEDinssnumero.Mask = "99999";
+            this.MASKEDinssnumero.Location = new System.Drawing.Point(191, 143);
+            this.MASKEDinssnumero.Mask = "9999999";
             this.MASKEDinssnumero.Name = "MASKEDinssnumero";
             this.MASKEDinssnumero.Size = new System.Drawing.Size(100, 23);
             this.MASKEDinssnumero.TabIndex = 1;
@@ -84,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightBlue;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(35, 159);
+            this.label1.Location = new System.Drawing.Point(35, 149);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 2;
@@ -95,7 +96,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.LightBlue;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(35, 214);
+            this.label2.Location = new System.Drawing.Point(35, 204);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 17);
             this.label2.TabIndex = 4;
@@ -103,8 +104,8 @@
             // 
             // MASKEDingresomensual
             // 
-            this.MASKEDingresomensual.Location = new System.Drawing.Point(191, 209);
-            this.MASKEDingresomensual.Mask = "99999";
+            this.MASKEDingresomensual.Location = new System.Drawing.Point(191, 199);
+            this.MASKEDingresomensual.Mask = "999999";
             this.MASKEDingresomensual.Name = "MASKEDingresomensual";
             this.MASKEDingresomensual.Size = new System.Drawing.Size(100, 23);
             this.MASKEDingresomensual.TabIndex = 3;
@@ -115,7 +116,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(19, 104);
+            this.label3.Location = new System.Drawing.Point(19, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 7;
@@ -173,7 +174,7 @@
             // 
             this.BTNsalir.BackColor = System.Drawing.Color.DodgerBlue;
             this.BTNsalir.ForeColor = System.Drawing.Color.White;
-            this.BTNsalir.Location = new System.Drawing.Point(557, 207);
+            this.BTNsalir.Location = new System.Drawing.Point(557, 199);
             this.BTNsalir.Name = "BTNsalir";
             this.BTNsalir.Size = new System.Drawing.Size(75, 23);
             this.BTNsalir.TabIndex = 18;
@@ -185,18 +186,19 @@
             // 
             this.BTNlimpiar.BackColor = System.Drawing.Color.DodgerBlue;
             this.BTNlimpiar.ForeColor = System.Drawing.Color.White;
-            this.BTNlimpiar.Location = new System.Drawing.Point(453, 208);
+            this.BTNlimpiar.Location = new System.Drawing.Point(453, 200);
             this.BTNlimpiar.Name = "BTNlimpiar";
             this.BTNlimpiar.Size = new System.Drawing.Size(75, 23);
             this.BTNlimpiar.TabIndex = 17;
             this.BTNlimpiar.Text = "Limpiar";
             this.BTNlimpiar.UseVisualStyleBackColor = false;
+            this.BTNlimpiar.Click += new System.EventHandler(this.BTNlimpiar_Click);
             // 
             // BTNcalcular
             // 
             this.BTNcalcular.BackColor = System.Drawing.Color.DodgerBlue;
             this.BTNcalcular.ForeColor = System.Drawing.Color.White;
-            this.BTNcalcular.Location = new System.Drawing.Point(340, 208);
+            this.BTNcalcular.Location = new System.Drawing.Point(340, 200);
             this.BTNcalcular.Name = "BTNcalcular";
             this.BTNcalcular.Size = new System.Drawing.Size(75, 23);
             this.BTNcalcular.TabIndex = 16;
@@ -209,7 +211,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(660, 266);
+            this.ClientSize = new System.Drawing.Size(660, 234);
             this.Controls.Add(this.BTNsalir);
             this.Controls.Add(this.BTNlimpiar);
             this.Controls.Add(this.BTNcalcular);
